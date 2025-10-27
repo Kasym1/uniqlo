@@ -17,7 +17,7 @@
  *     ведь у всех магазинов они одинаковые.
  */
 
-class Uniqlo
+class Product
 {
     public $url;
     public $name;
@@ -35,38 +35,3 @@ class Uniqlo
         return $this->url - $this->name - $this->price;
     }
 }
-
-class BaseShop implements ShopInterface
-{
-    protected $url;
-    protected $name;
-    protected $totalPage;
-
-    public function __construct($url, $name, $totalPage){
-        $this->url = $url;
-        $this->name = $name;
-        $this->totalPage = $totalPage;
-    }
-
-    public function getItems()
-    {
-    }
-
-    public function getTotalPage()
-    {
-        return $this->totalPage;
-    }
-}
-
-class AmazonShop extends BaseShop
-{
-}
-
-class UniqloShop extends BaseShop
-{
-}
-
-class RakutenShop extends BaseShop
-{
-}
-
