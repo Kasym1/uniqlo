@@ -1,5 +1,8 @@
 <?php
 
+require_once __DIR__ . '/BaseShop.php';
+require_once __DIR__ . '/../Product/Product.php';
+
 class AmazonShop extends BaseShop
 {
     public function __construct()

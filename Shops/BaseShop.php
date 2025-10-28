@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/../Interface/ShopInterface.php';
+
 class BaseShop implements ShopInterface
 {
     protected $url;
